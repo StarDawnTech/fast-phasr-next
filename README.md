@@ -41,5 +41,5 @@ pip -r requirement.txt
 ### 推理
 
 ```
-python main.py -d [import directory] -m [model default="base" -l [language default="auto"]]
+python main.py -d [import directory] -m [model default="base" -l [language default="auto"]
 ```
