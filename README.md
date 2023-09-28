@@ -1,6 +1,6 @@
 # Fast-Phasr-Next
 
-<i>新一代轻量级Diffsinger音素自动标注工具</i>
+<i>新一代轻量级Diffsinger自动音素标注工具</i>
 
 **目前仅支持中文**
 
