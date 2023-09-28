@@ -38,8 +38,10 @@ pip -r requirement.txt
 | medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
 | large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
 
+**实际测试中，base和small模型已经能取得较好的标注效果，非必要无需选择更大的模型**
+
 ### 推理
 
 ```
-python main.py -d [import directory] -m [model default="base" -l [language default="auto"]
+python main.py -d [import directory] -m [model default="base"] -l [language default="auto"]
 ```
