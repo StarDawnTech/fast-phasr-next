@@ -7,7 +7,7 @@ import os
 parser = argparse.ArgumentParser(description="Convert audio files to .lab files with pinyin using whisper")
 parser.add_argument("-m", "--model", type=str, choices=["tiny", "base", "small", "medium", "large"], default="base", help="The model of whisper")
 parser.add_argument("-d", "--directory", type=str, required=True, help="The directory of audio files")
-parser.add_argument("-l", "--language", type=str, choices=["english", "chinese", "spanish", "french", "german", "auto"], default="auto", help="The language of whisper")
+parser.add_argument("-l", "--language", type=str, choices=["English", "Chinese", "Spanish", "French", "German", "auto"], default="auto", help="The language of whisper")
 args = parser.parse_args()
 
 model = whisper.load_model(args.model)
