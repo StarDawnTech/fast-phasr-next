@@ -33,7 +33,7 @@ pip -r requirement.txt
 python main.py -d [import directory] -m [model default="base" -l [language default="auto"]]
 ```
 
-可选模型
+## 可选模型
 
 |  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
 |:------:|:----------:|:------------------:|:------------------:|:-------------:|:--------------:|
