@@ -20,13 +20,13 @@ pypinyin
 
 ```
 # cpu
-pip -r requirement.txt
+pip install -r requirement.txt
 
 # gpu
 conda install cudatoolkit -y
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
-pip -r requirement.txt
+pip install -r requirement.txt
 ```
 ### 可选模型
 
