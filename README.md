@@ -1,10 +1,13 @@
-# Fast-Phasr-Next
+<div align="center">
+
+<h1>Fast-Phasr-Next</h1>
 
 <i>新一代轻量级Diffsinger自动音素标注工具</i>
 
-**目前仅支持中文**
+<b>⚠️警告：程序永远存在不确定性，请不要100%相信自动程序（即使程序有很高的可靠性），如果是重大项目请在使用该程序后对音素序列进行必要的检查</b>
 
-**ps:程序永远存在不确定性，请不要100%相信自动程序（即使程序有很高的可靠性），如果是重大项目请在使用该程序后对音素序列进行必要的检查**
+<b> 目前，本项目仅支持中文 <br>Copyright © 启明星晓StarDawn&SuSWhW. All rights reserved. <br>使用Apache-2.0 license开放源代码</b>
+</div>
 
 ## 使用
 
@@ -18,15 +21,30 @@ pypinyin
 
 ### 安装依赖
 
+```bash
+git clone https://github.com/StarDawn-VirtualSinger/fast-phasr-next.git
 ```
+
+- 使用脚本：  
+```bash
+# windows
+.\install.bat
+
+# linux
+bash ./install.sh
+```
+
+- 手动安装  
+
+```bash
 # cpu
-pip -r requirement.txt
+pip install -r requirement.txt
 
 # gpu
 conda install cudatoolkit -y
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
-pip -r requirement.txt
+pip install -r requirement.txt
 ```
 ### 可选模型
 
@@ -45,3 +63,12 @@ pip -r requirement.txt
 ```
 python main.py -d [import directory] -m [model default="base"] -l [language default="auto"]
 ```
+
+## 感谢以下贡献者！
+<a href="https://github.com/StarDawn-VirtualSinger/fast-phasr-next/contributors">
+  <img src="https://contrib.rocks/image?repo=StarDawn-VirtualSinger/fast-phasr-next" />
+</a>
+
+## 来自Wangs友善的劝告
+> 饭都喂到你嘴边了你可以张下你的嘴吗？
+
