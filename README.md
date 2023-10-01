@@ -68,7 +68,3 @@ python main.py -d [import directory] -m [model default="base"] -l [language defa
 <a href="https://github.com/StarDawn-VirtualSinger/fast-phasr-next/contributors">
   <img src="https://contrib.rocks/image?repo=StarDawn-VirtualSinger/fast-phasr-next" />
 </a>
-
-## 来自Wangs友善的劝告
-> 饭都喂到你嘴边了你可以张下你的嘴吗？
-
