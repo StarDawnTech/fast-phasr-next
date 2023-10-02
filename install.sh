@@ -1,7 +1,8 @@
 #!/bin/bash
 
 echo "Fast-Phasr-Next————新一代轻量级Diffsinger自动音素标注工具"
-options=("1. 安装CPU版本" "2. 安装GPU版本")
+echo "十分推荐您创建一个Conda环境！Conda环境就像冰箱里的盒子一样保证不串味！"
+options=("1. 安装CPU版本" "2. 安装GPU版本" "3. 创建Conda环境并安装CPU版本" "4. 创建Conda环境并安装GPU版本")
 
 echo "请选择一个选项："
 select choice in "${options[@]}"; do
@@ -16,6 +17,22 @@ select choice in "${options[@]}"; do
             pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
             pip install -r requirement.txt
             echo "完成"
+            break
+            ;;
+        3)
+            conda create -n fast-phasr-next python==3.8
+            conda activate fast-phasr-next
+            pip install -r requirement.txt
+            echo "完成，请使用conda activate fast-phasr-next激活环境～"
+            break
+            ;;
+        4)
+            conda create -n fast-phasr-next python==3.8
+            conda activate fast-phasr-next
+            conda install cudatoolkit -y
+            pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+            pip install -r requirement.txt
+            echo "完成，请使用conda activate fast-phasr-next激活环境～"
             break
             ;;
         *)
