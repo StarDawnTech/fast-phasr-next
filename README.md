@@ -6,7 +6,7 @@
 
 <b>⚠️警告：程序永远存在不确定性，请不要100%相信自动程序（即使程序有很高的可靠性），如果是重大项目请在使用该程序后对音素序列进行必要的检查</b>
 
-<b> 目前，本项目仅支持中文 <br>Copyright © 启明星晓StarDawn&SuSWhW. All rights reserved. <br>使用Apache-2.0 license开放源代码</b>
+<b> 目前，本项目仅支持中文 <br>Copyright © 启明星晓StarDawn&Q78KG(SuSWhW). All rights reserved. <br>使用Apache-2.0 license开放源代码</b>
 </div>
 
 ## 使用
