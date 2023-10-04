@@ -25,6 +25,13 @@ pypinyin
 git clone https://github.com/StarDawn-VirtualSinger/fast-phasr-next.git
 ```
 
+- 创建conda环境
+
+```
+conda create -n fast-phasr-next python==3.11 -y
+conda activate fast-phasr-next
+```
+
 - 使用脚本：  
 ```bash
 # windows
