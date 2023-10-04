@@ -20,14 +20,14 @@ select choice in "${options[@]}"; do
             break
             ;;
         3)
-            conda create -n fast-phasr-next python==3.11
+            conda create -n fast-phasr-next python==3.12
             conda activate fast-phasr-next
             pip install -r requirement.txt
             echo "完成，请使用conda activate fast-phasr-next激活环境～"
             break
             ;;
         4)
-            conda create -n fast-phasr-next python==3.11
+            conda create -n fast-phasr-next python==3.12
             conda activate fast-phasr-next
             conda install cudatoolkit -y
             pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
