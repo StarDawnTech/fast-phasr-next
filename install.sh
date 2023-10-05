@@ -20,7 +20,7 @@ select choice in "${options[@]}"; do
             break
             ;;
         3)
-            conda create -n fast-phasr-next python==3.8
+            conda create -n fast-phasr-next python==3.12
             echo "请使用conda activate fast-phasr-next激活环境～并安装环境"
             break
             ;;
