@@ -20,7 +20,7 @@ openai-whisper
 pypinyin
 ffmpeg
 ```
-**ffmpeg需要自行安装**
+**请自行安装ffmpeg并添加到系统环境变量**
 
 ### 安装依赖
 
