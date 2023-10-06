@@ -18,7 +18,9 @@
 torch
 openai-whisper
 pypinyin
+ffmpeg
 ```
+**ffmpeg需要自行安装**
 
 ### 安装依赖
 
