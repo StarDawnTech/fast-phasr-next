@@ -1,26 +1,26 @@
-English | [简体中文](/README.zh-CN.md)
+[English](/README.md) | 简体中文
 
 <div align="center">
 
 <h1>Fast-Phasr-Next</h1>
 
-<i>New generation lightweight DiffSinger automatic phoneme annotation tool</i>
+<i>新一代轻量级 DiffSinger 自动音素标注工具</i>
 
-<b>⚠️ Warning: Programs always have uncertainty, please do not trust automatic programs 100% (even if the program has high reliability). If it is a major project, please perform necessary checks on the phoneme sequence after using the program</b>
+<b>⚠️ 警告：程序永远存在不确定性，请不要 100%相信自动程序（即使程序有很高的可靠性），如果是重大项目请在使用该程序后对音素序列进行必要的检查</b>
 
-<b> Currently, the project supports Chinese, English, and Japanese (but the reliability of Japanese recognition is not high)</b>
+<b> 目前，该项目支持中文、英文和日语（但日语识别的可靠性不高）</b>
 
 </div>
 
-## Supported languages
+## 支持语言
 
-- [x] Support for Chinese
-- [x] Support for English
-- [x] Support for Japanese
+- [x] 支持中文
+- [x] 支持英文
+- [x] 支持日文
 
-## Use
+## 使用
 
-### Requirements
+### 依赖
 
 ```
 torch
@@ -28,22 +28,22 @@ openai-whisper
 pypinyin
 ffmpeg
 ```
-**Please install ffmpeg yourself and add it to the system environment variable**
+**请自行安装ffmpeg并添加到系统环境变量**
 
-### Installation dependencies
+### 安装依赖
 
 ```bash
 git clone https://github.com/StarDawn-VirtualSinger/fast-phasr-next.git
 ```
 
-- Creating a Conda Environment
+- 创建 conda 环境
 
 ```
 conda create -n fast-phasr-next python==3.12 -y
 conda activate fast-phasr-next
 ```
 
-- Using Scripts：
+- 使用脚本：
 
 ```bash
 # windows
@@ -53,7 +53,7 @@ conda activate fast-phasr-next
 bash ./install.sh
 ```
 
-- Manual install
+- 手动安装
 
 ```bash
 # cpu
@@ -66,7 +66,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip install -r requirement.txt
 ```
 
-### Optional model
+### 可选模型
 
 |  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
 | :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: |
@@ -76,15 +76,15 @@ pip install -r requirement.txt
 | medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
 | large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
 
-**In actual testing, the base and small models have already achieved good annotation results, and there is no need to choose a larger model if not necessary**
+**实际测试中，base 和 small 模型已经能取得较好的标注效果，非必要无需选择更大的模型**
 
-### Inference
+### 推理
 
 ```
 python main.py -d [import directory] -m [model default="base"] -l [language default="Chinese"]
 ```
 
-## Thank you to the following contributors!
+## 感谢以下贡献者！
 
 <a href="https://github.com/StarDawn-VirtualSinger/fast-phasr-next/contributors">
   <img src="https://contrib.rocks/image?repo=StarDawn-VirtualSinger/fast-phasr-next" />
