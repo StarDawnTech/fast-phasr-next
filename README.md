@@ -8,7 +8,7 @@ English | [简体中文](/README.zh-CN.md)
 
 <b>⚠️ Warning: Programs always have uncertainty, please do not trust automatic programs 100% (even if the program has high reliability). If it is a major project, please perform necessary checks on the phoneme sequence after using the program</b>
 
-<b> Currently, the project supports Chinese, English, and Japanese (but the reliability of Japanese recognition is not high)</b>
+<b> Currently, the project supports Chinese, English, and Japanese (but the reliability of Japanese recognition is not high and a larger model needs to be selected)</b>
 
 </div>
 
