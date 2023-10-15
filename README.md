@@ -18,7 +18,7 @@ English | [简体中文](/README.zh-CN.md)
 - [x] Support for English
 - [x] Support for Japanese
 
-## Use
+## Getting Started
 
 ### Requirements
 
@@ -30,18 +30,7 @@ ffmpeg
 ```
 **Please install ffmpeg yourself and add it to the system environment variable**
 
-### Installation dependencies
-
-```bash
-git clone https://github.com/StarDawn-VirtualSinger/fast-phasr-next.git
-```
-
-- Creating a Conda Environment
-
-```
-conda create -n fast-phasr-next python==3.12 -y
-conda activate fast-phasr-next
-```
+fast-phasr-next requires Python 3.8 or later. We strongly recommend you create a virtual environment via Conda or venv before installing dependencies.
 
 - Using Scripts：
 

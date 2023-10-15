@@ -18,7 +18,7 @@
 - [x] 支持英文
 - [x] 支持日文
 
-## 使用
+## 开始使用
 
 ### 依赖
 
@@ -30,18 +30,9 @@ ffmpeg
 ```
 **请自行安装ffmpeg并添加到系统环境变量**
 
+fast-phasr-next需要Python 3.8或更高版本。强烈建议您在安装依赖项之前通过Conda或venv创建一个虚拟环境。
+
 ### 安装依赖
-
-```bash
-git clone https://github.com/StarDawn-VirtualSinger/fast-phasr-next.git
-```
-
-- 创建 conda 环境
-
-```
-conda create -n fast-phasr-next python==3.12 -y
-conda activate fast-phasr-next
-```
 
 - 使用脚本：
 
