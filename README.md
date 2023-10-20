@@ -32,17 +32,7 @@ ffmpeg
 
 fast-phasr-next requires Python 3.8 or later. We strongly recommend you create a virtual environment via Conda or venv before installing dependencies.
 
-- Using Scripts：
-
-```bash
-# windows
-.\install.bat
-
-# linux
-bash ./install.sh
-```
-
-- Manual install
+- install
 
 ```bash
 # cpu
