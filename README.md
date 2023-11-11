@@ -6,9 +6,7 @@ English | [简体中文](/README.zh-CN.md)
 
 <i>New generation lightweight DiffSinger automatic phoneme annotation tool</i>
 
-<b>The project has been discontinued due to the availability of a more complete alternative. For a better solution,
-[please see here](https://github.com/wolfgitpr/LyricFA)
-.</b>
+<b>The project has been discontinued due to the availability of a more complete alternative. For a better solution,[please see here](https://github.com/wolfgitpr/LyricFA).</b>
 
 <b>⚠️ Warning: Programs always have uncertainty, please do not trust automatic programs 100% (even if the program has high reliability). If it is a major project, please perform necessary checks on the phoneme sequence after using the program</b>
 
