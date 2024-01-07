@@ -6,8 +6,7 @@
 
 <i>新一代轻量级 DiffSinger 自动音素标注工具</i>
 
-<b>由于存在更完整的替代方案，该项目已停止。如需更好的解决方案，请参阅[此处](https://github.com/wolfgitpr/LyricFA)
-。</b>
+<b>如需更好的解决方案，请参阅[此处](https://github.com/wolfgitpr/LyricFA)。</b>
 
 <b>⚠️ 警告：程序永远存在不确定性，请不要 100%相信自动程序（即使程序有很高的可靠性），如果是重大项目请在使用该程序后对音素序列进行必要的检查</b>
 
@@ -27,11 +26,9 @@
 
 ```
 torch
-openai-whisper
+faster-whisper
 pypinyin
-ffmpeg
 ```
-**请自行安装ffmpeg并添加到系统环境变量**
 
 fast-phasr-next需要Python 3.8或更高版本。强烈建议您在安装依赖项之前通过Conda或venv创建一个虚拟环境。
 
@@ -60,12 +57,10 @@ pip install -r requirement.txt
 | medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
 | large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
 
-**实际测试中，base 和 small 模型已经能取得较好的标注效果，非必要无需选择更大的模型**
-
 ### 推理
 
 ```
-python main.py -d [import directory] -m [model default="base"] -l [language default="Chinese"]
+python main.py -d [import directory] -m [model default="large"] -l [language default="Chinese"] --device [default="cuda"] --compute_type [default="float16"]
 ```
 
 ## 感谢以下贡献者！

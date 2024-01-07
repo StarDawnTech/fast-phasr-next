@@ -6,7 +6,7 @@ English | [简体中文](/README.zh-CN.md)
 
 <i>New generation lightweight DiffSinger automatic phoneme annotation tool</i>
 
-<b>The project has been discontinued due to the availability of a more complete alternative. For a better solution,[please see here](https://github.com/wolfgitpr/LyricFA).</b>
+<b>For a better solution,[please see here](https://github.com/wolfgitpr/LyricFA).</b>
 
 <b>⚠️ Warning: Programs always have uncertainty, please do not trust automatic programs 100% (even if the program has high reliability). If it is a major project, please perform necessary checks on the phoneme sequence after using the program</b>
 
@@ -26,11 +26,9 @@ English | [简体中文](/README.zh-CN.md)
 
 ```
 torch
-openai-whisper
+faster-whisper
 pypinyin
-ffmpeg
 ```
-**Please install ffmpeg yourself and add it to the system environment variable**
 
 fast-phasr-next requires Python 3.8 or later. We strongly recommend you create a virtual environment via Conda or venv before installing dependencies.
 
@@ -57,12 +55,10 @@ pip install -r requirement.txt
 | medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
 | large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
 
-**In actual testing, the base and small models have already achieved good annotation results, and there is no need to choose a larger model if not necessary**
-
 ### Inference
 
 ```
-python main.py -d [import directory] -m [model default="base"] -l [language default="Chinese"]
+python main.py -d [import directory] -m [model default="large"] -l [language default="Chinese"] --device [default="cuda"] --compute_type [default="float16"]
 ```
 
 ## Thank you to the following contributors!
