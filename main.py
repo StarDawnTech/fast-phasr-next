@@ -21,10 +21,9 @@ output_dir = args.directory
 
 audio_files = [f for f in os.listdir(input_dir) if f.endswith(".mp3") or f.endswith(".wav")]
 
-for audio_file in tqdm.tqdm(audio_files, desc="Processing audio files"):
+for audio_file in tqdm.tqdm(audio_files, desc="Processing audio files", ncols=70):
     audio_path = os.path.join(input_dir, audio_file)
     segments, info = model.transcribe(audio_path, beam_size=5)
-    print(f"Detected language: {info.language} with probability {info.language_probability}")
     text = ""
     for segment in segments:
         text += segment.text + " "
