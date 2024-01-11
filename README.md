@@ -53,7 +53,7 @@ In the test environment of RTX 3060 Laptop 6G GPU, using the Large-v3-fp16 model
 
 #### Optional model
 
-|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed (Compared with the original project) |
+|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed | Relative speed Compared with the original project |
 | :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: | :------------: |
 |  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |      ~128x     |
 |  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |      ~64x      |
