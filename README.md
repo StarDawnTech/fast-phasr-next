@@ -45,15 +45,21 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip install -r requirement.txt
 ```
 
-### Optional model
+### About Whisper
 
-|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
-| :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: |
-|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |
-|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |
-| small  |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |
-| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
-| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
+This project uses fast-whisper, which reimplements OpenAI's Whisper model using CTranslate2, a fast inference engine for the Transformer model. This implementation is 4x faster than openai/whisper but uses less memory and has the same accuracy. Efficiency can be further improved through 8-bit quantization on CPU and GPU.
+
+In the test environment of RTX 3060 Laptop 6G GPU, using the Large-v3-fp16 model, it only takes about 0.7s to label a 6~10s audio, and in the labeling test of 50 audios, about 98.71% can be obtained accuracy
+
+#### Optional model
+
+|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed (Compared with the original project) |
+| :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: | :------------: |
+|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |      ~128x     |
+|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |      ~64x      |
+|  small |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |      ~36x      |
+| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |      ~8x       |
+| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |      ~4x       |
 
 ### Inference
 

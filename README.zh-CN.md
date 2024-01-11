@@ -47,15 +47,21 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip install -r requirement.txt
 ```
 
-### 可选模型
+### 关于Whisper
 
-|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
-| :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: |
-|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |
-|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |
-| small  |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |
-| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
-| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
+这个项目使用fast-whisper，它是使用 CTranslate2重新实现OpenAI的Whisper模型，CTranslate2是Transformer模型的快速推理引擎。这种实现方式的速度比openai/whisper快4倍，但使用的内存更少，且具有相同的精度。通过CPU和GPU上的8-bit量化，可以进一步提高效率。
+
+在RTX 3060 Laptop 6G GPU的测试环境中，使用Large-v3-fp16模型的情况下，标注一条6~10s的音频仅需要约0.7s，而在对50条音频的标注测试中可以获得约98.71%的准确率
+
+#### 可选模型
+
+|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed (Compared with the original project) |
+| :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: | :------------: |
+|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |      ~128x     |
+|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |      ~64x      |
+|  small |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |      ~36x      |
+| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |      ~8x       |
+| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |      ~4x       |
 
 ### 推理
 
