@@ -17,7 +17,6 @@ English | [简体中文](/README.zh-CN.md)
 ## Supported languages
 
 - [x] Support for Chinese
-- [x] Support for English
 - [x] Support for Japanese
 
 ## Getting Started
