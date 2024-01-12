@@ -2,13 +2,17 @@ from faster_whisper import WhisperModel
 import argparse
 import tqdm
 import os
-import lang
+from lang.ZhG2p import ZhG2p
+from lang import JpG2p
 import sys
+
+zhg2p = ZhG2p('mandarin')
+jpg2p = JpG2p
 
 parser = argparse.ArgumentParser(description="Convert audio files to .lab files with pinyin using faster-whisper")
 parser.add_argument("-m", "--model", type=str, choices=["tiny", "base", "small", "medium", "large"], default="large", help="The model of whisper")
 parser.add_argument("-d", "--directory", type=str, required=True, help="The directory of audio files")
-parser.add_argument("-l", "--language", type=str, choices=["English", "Chinese", "Japanese"], default="Chinese", help="The language of whisper")
+parser.add_argument("-l", "--language", type=str, choices=["Chinese", "Japanese"], default="Chinese", help="The language of whisper")
 parser.add_argument("--device", type=str, choices=["cpu", "cuda"], default="cuda", help="The device to run the model")
 parser.add_argument("--compute_type", type=str, choices=["float32", "float16", "int8_float16", "int8"], default="float16", help="The compute type for the model")
 args = parser.parse_args()
@@ -28,11 +32,9 @@ for audio_file in tqdm.tqdm(audio_files, desc="Processing audio files"):
     for segment in segments:
         text += segment.text + " "
     if args.language == "Chinese":
-        output = lang.cn_output(text)
-    elif args.language == "English":
-        output = lang.en_output(text)
+        output = zhg2p.convert(text)
     elif args.language == "Japanese":
-        output = lang.jp_output(text)
+        output = jpg2p.convert(text)
     else:
         print("Unsupported language")
         sys.exit()

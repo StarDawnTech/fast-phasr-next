@@ -1,3 +1,2 @@
 faster-whisper
-pypinyin
 pykakasi
