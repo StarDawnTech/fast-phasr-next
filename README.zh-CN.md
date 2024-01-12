@@ -26,7 +26,7 @@
 ```
 torch
 faster-whisper
-pypinyin
+pykakasi
 ```
 
 fast-phasr-next需要Python 3.8或更高版本。强烈建议您在安装依赖项之前通过Conda或venv创建一个虚拟环境。
