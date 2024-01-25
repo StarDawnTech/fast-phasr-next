@@ -1,49 +1,40 @@
+English | [简体中文](/README.zh-CN.md)
+
 <div align="center">
 
 <h1>Fast-Phasr-Next</h1>
 
-<i>新一代轻量级 DiffSinger 自动音素标注工具</i>
+<i>New generation lightweight DiffSinger automatic phoneme annotation tool</i>
 
-<b>⚠️ 警告：程序永远存在不确定性，请不要 100%相信自动程序（即使程序有很高的可靠性），如果是重大项目请在使用该程序后对音素序列进行必要的检查</b>
+<b>For a better solution,[please see here](https://github.com/wolfgitpr/LyricFA).</b>
 
-<b> 目前，本项目仅支持中文 </b>
+<b>⚠️ Warning: Programs always have uncertainty, please do not trust automatic programs 100% (even if the program has high reliability). If it is a major project, please perform necessary checks on the phoneme sequence after using the program</b>
+
+<b> Currently, the project supports Chinese, English, and Japanese (but the reliability of Japanese recognition is not high and a larger model needs to be selected)</b>
 
 </div>
 
-## 使用
+![](./img/workflow.png)
 
-### 依赖
+## Supported languages
+
+- [x] Support for Chinese
+- [x] Support for English
+- [x] Support for Japanese
+
+## Getting Started
+
+### Requirements
 
 ```
 torch
-openai-whisper
-pypinyin
+faster-whisper
+pykakasi
 ```
 
-### 安装依赖
+fast-phasr-next requires Python 3.8 or later. We strongly recommend you create a virtual environment via Conda or venv before installing dependencies.
 
-```bash
-git clone https://github.com/StarDawn-VirtualSinger/fast-phasr-next.git
-```
-
-- 创建 conda 环境
-
-```
-conda create -n fast-phasr-next python==3.12 -y
-conda activate fast-phasr-next
-```
-
-- 使用脚本：
-
-```bash
-# windows
-.\install.bat
-
-# linux
-bash ./install.sh
-```
-
-- 手动安装
+- install
 
 ```bash
 # cpu
@@ -56,25 +47,29 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip install -r requirement.txt
 ```
 
-### 可选模型
+### About Whisper
 
-|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
-| :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: |
-|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |
-|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |
-| small  |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |
-| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
-| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
+This project uses fast-whisper, which reimplements OpenAI's Whisper model using CTranslate2, a fast inference engine for the Transformer model. This implementation is 4x faster than openai/whisper but uses less memory and has the same accuracy. Efficiency can be further improved through 8-bit quantization on CPU and GPU.
 
-**实际测试中，base 和 small 模型已经能取得较好的标注效果，非必要无需选择更大的模型**
+In the test environment of RTX 3060 Laptop 6G GPU, using the Large-v3-fp16 model, it only takes about 0.7s to label a 6~10s audio, and in the labeling test of 50 audios, about 98.71% can be obtained accuracy
 
-### 推理
+#### Optional model
+
+|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed | Relative speed (Compared with the original project) |
+| :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: | :------------: |
+|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |      ~128x     |
+|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |      ~64x      |
+|  small |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |      ~36x      |
+| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |      ~8x       |
+| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |      ~4x       |
+
+### Inference
 
 ```
-python main.py -d [import directory] -m [model default="base"] -l [language default="auto"]
+python main.py -d [import directory] -m [model default="large"] -l [language default="Chinese"] --device [default="cuda"] --compute_type [default="float16"]
 ```
 
-## 感谢以下贡献者！
+## Thank you to the following contributors!
 
 <a href="https://github.com/StarDawn-VirtualSinger/fast-phasr-next/contributors">
   <img src="https://contrib.rocks/image?repo=StarDawn-VirtualSinger/fast-phasr-next" />
