@@ -12,7 +12,11 @@
 
 <b> 目前，该项目支持中文、英文和日语（但日语识别的可靠性不高，需要选择更大的模型）</b>
 
+<img src="./img/workflow.png" style="max-width:200px;">
+
 </div>
+
+
 
 ## 支持语言
 

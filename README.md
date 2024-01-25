@@ -12,7 +12,11 @@ English | [简体中文](/README.zh-CN.md)
 
 <b> Currently, the project supports Chinese, English, and Japanese (but the reliability of Japanese recognition is not high and a larger model needs to be selected)</b>
 
+<img src="./img/workflow.png" style="max-width:200px;">
+
 </div>
+
+
 
 ## Supported languages
 
