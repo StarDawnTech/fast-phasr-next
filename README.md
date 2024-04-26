@@ -55,13 +55,13 @@ In the test environment of RTX 3060 Laptop 6G GPU, using the Large-v3-fp16 model
 
 #### Optional model
 
-|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed | Relative speed (Compared with the original project) |
-| :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: | :------------: |
-|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |      ~128x     |
-|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |      ~64x      |
-|  small |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |      ~36x      |
-| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |      ~8x       |
-| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |      ~4x       |
+|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed (Compared with the original project) |
+| :----: | :--------: | :----------------: | :----------------: | :-----------: | :------------: |
+|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~128x     |
+|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~64x      |
+|  small |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~36x      |
+| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~8x       |
+| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |      ~4x       |
 
 ### Inference
 
