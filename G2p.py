@@ -1,3 +1,19 @@
+import pykakasi
+import re
+
+class JpG2p:
+    @staticmethod
+    def convert(text):
+        kakasi = pykakasi.kakasi()
+        kakasi.setMode("H", "a")
+        kakasi.setMode("K", "a")
+        kakasi.setMode("J", "a")
+        kakasi.setMode("s", True)
+        kakasi.setMode("E", "a")
+        converter = kakasi.getConverter()
+        jp_output = converter.do(text)
+        return jp_output
+
 def is_letter(c):
     return ('a' <= c <= 'z') or ('A' <= c <= 'Z')
 
@@ -192,3 +208,12 @@ class ZhG2p:
 
     def get_default_pinyin(self, text):
         return self.WordDict[text] if text in self.WordDict else None
+
+
+
+class EnG2p:
+    @staticmethod
+    def convert(text):
+        en_output = re.sub(r'[^\w\s]', ' ', text)
+        en_output = re.sub(r'\s+', ' ', en_output).strip()
+        return en_output

@@ -2,9 +2,7 @@ from faster_whisper import WhisperModel
 import argparse
 import tqdm
 import os
-from lang.ZhG2p import ZhG2p
-from lang.EnG2p import EnG2p
-from lang.JpG2p import JpG2p
+from G2p import ZhG2p, EnG2p, JpG2p
 import sys
 
 zhg2p = ZhG2p('mandarin')
